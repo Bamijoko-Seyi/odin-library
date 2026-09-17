@@ -7,13 +7,19 @@
 html, body {
     height: 100%;
     margin: 0;
-    padding: 0;
+    padding: 1px;
+    background-color: #a7ca55;
 }
 
 .main-container {
-    background-color: #a7ca55;
-    height: 100vh;
     font-family: Roboto, sans-serif;
+    padding: 1px;
+}
+
+.main-container > h1 {
+    font-size: 72px;
+    margin-top: 32px;
+    margin-left: 32px;
 }
 
 .book-container {
@@ -21,11 +27,85 @@ html, body {
     justify-items: center;
     flex-direction: column;
     background-color: #ffff;
-    border-radius: 15px;
+    border-radius: 4px;
     width: 384px;
     height: auto;
     padding: 16px;
 }
+
+.list-container {
+    margin-top: 32px;
+    margin-left: 64px;
+}
+
+.form-container {
+    background-color: #ffffff;
+    padding: 16px;
+    border-radius: 4px;
+    width: 512px;
+}
+
+.form-container input {
+    padding: 10px 12px;
+    border: 1px solid #E5E7EB;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+    min-width: 200px;
+}
+
+#description {
+    width: 100%;
+    height: 384px;
+    padding: 10px 12px;
+    border: 1px solid #E5E7EB;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: inherit;      /* Textareas don't inherit font by default */
+    resize: vertical;          /* Allow vertical resizing only */
+    line-height: 1.5;
+    box-sizing: border-box;
+}
+
+.form-area {
+    margin-top: 64px;
+    margin-bottom: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-area > h2 {
+    margin-bottom: 32px;
+}
+
+button {
+    padding: 12px 40px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    align-self: flex-start; /* Did this to fix width problems*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-area > div:last-child {
+    margin-top: 32px;
+    display: flex;
+    gap: 64px;
+}
+
+.form-container {
+    
+}
+
+.main-container > button {
+    margin: 32px auto 32px auto;
+}
+
 
 
 
