@@ -16,9 +16,10 @@
                 <h3 class="author">By Sam rockwell, 1942</h3>
                 <h4 class="category">Horror Action</h4>
                 <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nisl urna, porttitor eget magna sit amet, scelerisque tempus nibh. Pellentesque quis sem ultrices, posuere tortor. </p>
+                <button class="delete-button">Delete</button>
             </div>
         </div>
-        <div class="form-area">
+        <div hidden class="form-area">
             <h2>Let's add something new...</h2>
             <div class="form-container">
                     <div>
@@ -43,11 +44,13 @@
                     </div>
             </div>
             <div>
-                <button>Cancel</button>
-                <Button>Add Book</Button>
+                <button id="cancel-button">Cancel</button>
+                <Button id="add-book-button">Add Book</Button>
             </div>
         </div>
-        <button>Add New Book</button>
+        <div class="button-container">
+            <button id="add-new-book-button">Add New Book</button>
+        </div>
     </div>
 </body>
 </html>

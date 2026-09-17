@@ -36,6 +36,17 @@ html, body {
 .list-container {
     margin-top: 32px;
     margin-left: 64px;
+    display: grid;
+    grid-template-columns: repeat(auto, auto);
+    grid-template-rows: repeat(auto, auto);
+    gap: 32px;
+    align-items: center;
+}
+
+.list-container button {
+    background-color: #ca5555;
+    color: #ffffff;
+    margin: 16px auto 0px auto;
 }
 
 .form-container {
@@ -65,6 +76,10 @@ html, body {
     resize: vertical;          /* Allow vertical resizing only */
     line-height: 1.5;
     box-sizing: border-box;
+}
+
+.form-area[hidden] {
+    display: none;
 }
 
 .form-area {
@@ -104,6 +119,13 @@ button {
 
 .main-container > button {
     margin: 32px auto 32px auto;
+
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin: 128px 0;
 }
 
 
