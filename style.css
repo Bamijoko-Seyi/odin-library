@@ -43,7 +43,11 @@ html, body {
     align-items: center;
 }
 
-.list-container button {
+.read-button {
+    margin: 16px auto 0px auto;
+}
+
+.delete-button {
     background-color: #ca5555;
     color: #ffffff;
     margin: 16px auto 0px auto;

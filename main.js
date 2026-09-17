@@ -13,7 +13,9 @@ function Book(title, author, yearOfPub, category, description) {
   this.yearOfPub = yearOfPub;
   this.category = category;
   this.description = description;
+  this.completed = false;
   this.id = crypto.randomUUID()
+
 }
 
 function addBookToLibrary(title, author, yearOfPub, category, description) {
@@ -39,22 +41,37 @@ function displayBooks() {
         const newH3 = document.createElement('h3');
         const newH4 = document.createElement('h4');
         const newP = document.createElement('p');
-        const newbutton = document.createElement('button')
+        const newReadButton = document.createElement('button')
+        const newDeleteButton = document.createElement('button')
 
         newDiv.setAttribute('class', 'book-container');
         newH2.setAttribute('class', 'title');
         newH3.setAttribute('class', 'author');
         newH4.setAttribute('class', 'category');
         newP.setAttribute('class', 'description');
-        newbutton.setAttribute('class', 'delete-button')
+        newReadButton.setAttribute('class', 'read-button');
+        newDeleteButton.setAttribute('class', 'delete-button');
 
         newH2.textContent = book.name;
         newH3.textContent = `${book.author}, ${book.yearOfPub}`;
         newH4.textContent = book.category;
         newP.textContent = book.description;
-        newbutton.textContent = "Delete"
+        newReadButton.textContent = "In Progress";
+        newDeleteButton.textContent = "Delete";
 
-        newbutton.addEventListener('click', () => {
+        newReadButton.addEventListener('click' , () => {
+            if (book.completed) {
+              book.completed = false;
+              newReadButton.textContent = "In Progress";
+            }
+
+            else{
+              book.completed = true
+              newReadButton.textContent = "Read";
+            }
+        })
+
+        newDeleteButton.addEventListener('click', () => {
             removeBookFromLibrary(book.id);
         });
 
@@ -62,7 +79,8 @@ function displayBooks() {
         newDiv.appendChild(newH3);
         newDiv.appendChild(newH4);
         newDiv.appendChild(newP);
-        newDiv.appendChild(newbutton)
+        newDiv.appendChild(newReadButton)
+        newDiv.appendChild(newDeleteButton);
 
         listContainer.appendChild(newDiv);
     }
